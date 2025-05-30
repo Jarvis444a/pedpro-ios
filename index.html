@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Silent Aim Menu</title>
+  <style>
+    body {
+      background-color: #fff9c4; /* สีเหลืองอ่อน */
+      font-family: Arial, sans-serif;
+      color: #4e3f00; /* สีเหลืองเข้ม */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .menu {
+      background-color: #fff176; /* สีเหลืองสดใส */
+      border: 1px solid #fbc02d; /* ขอบสีเหลืองเข้ม */
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(255, 193, 7, 0.7); /* เงาสีเหลือง */
+    }
+
+    .menu h2 {
+      color: #f57f17; /* หัวข้อสีเหลืองเข้ม */
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    label, select {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    select, input[type="checkbox"] {
+      margin-top: 5px;
+    }
+
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .slider {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <h2>PEDPRO PANEL ANDROID</h2>
+
+    <label>
+      <input type="checkbox" checked /> เปิดดูดหัว
+    </label>
+
+    <label>
+      เลือกโหมดยิงหัว!
+      <select>
+        <option>ดูดหัวแรง</option>
+        <option>ดูดปานกลาง</option>
+      </select>
+    </label>
+
+    <label>
+      เลือกโหมดยิงหัว
+      <select>
+        <option>ไฮไลท์r</option>
+        <option>ดันแรงค์</option>
+      </select>
+    </label>
+
+    <div class="checkbox-group">
+      <label><input type="checkbox" checked /> DPI 999</label>
+      <label><input type="checkbox" checked /> กระสุนตรง 20%</label>
+      <label><input type="checkbox" checked /> ช้วยลาก 80%</label>
+      <label><input type="checkbox" checked /> บูสเกมส์ลื่น</label>
+      <label><input type="checkbox" checked /> 240Hz</label>
+    </div>
+
+    <label>
+      ความไวจอ <span id="fovValue">342</span>
+      <input class="slider" type="range" min="1" max="500" value="342" oninput="document.getElementById('fovValue').innerText = this.value" />
+    </label>
+  </div>
+</body>
+</html>
